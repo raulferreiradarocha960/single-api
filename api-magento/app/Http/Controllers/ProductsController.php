@@ -13,7 +13,7 @@ class ProductsController extends Controller
 
         public function index()
         {
-            $products = Http::withToken('wfkfiw3l5478ntkitcxfzscidqwegxqg')->get("https://mcstaging.madeiranit.com.br/rest/V1/inventory/source-items?searchCriteria[filter_groups][0][filters][0][field]=sku&searchCriteria[filter_groups][0][filters][0][value]=&searchCriteria[filter_groups][0][filters][0][condition_type]=neq&searchCriteria[pageSize]=100");
+            $products = Http::withToken('your_token_api')->get("https://sua-url.com.br/rest/V1/inventory/source-items?searchCriteria[filter_groups][0][filters][0][field]=sku&searchCriteria[filter_groups][0][filters][0][value]=&searchCriteria[filter_groups][0][filters][0][condition_type]=neq&searchCriteria[pageSize]=100");
             
             $products = json_decode($products, true);
             //simple DTO
