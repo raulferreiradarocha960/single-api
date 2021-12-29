@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 });*/
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    //Route::get("/products", [ProductsController::class, "index"]);
+    Route::get("/products", [ProductsController::class, "index"]);
 });
 
-Route::get("/products", [ProductsController::class, "index"]);
+
