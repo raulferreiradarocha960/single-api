@@ -30,6 +30,20 @@ php artisan migrate
 
 php artisan serve
 
+#Token for user
+
+To generate a user token you will need to register the user first.
+After that, you can easily generate a token by following the steps below.
+
+On your terminal, inside the root folder, run the following commands:
+
+php artisan tinker
+
+>>> $user = User::first();
+>>> $user->createToken('myapptoken');
+
+Copy your token into plainTextToken and test it on your postman
+
 The file with the consumption url of the api is in app/Http/ProductsController.php
 Change the information to your real data.
 
