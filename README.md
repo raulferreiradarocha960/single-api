@@ -14,7 +14,11 @@ and run the command
 
 composer install
 
+Create the .env file by using the console command "cp .env.example. .env"
+
 #Creating a database connection
+
+Fillup the .env file database requirements with your local settings
 
 In this case, you must have mysql installed in your environment,
 or you can create a sqlite file in the database folder,
@@ -25,6 +29,8 @@ config/database.php, change default DB_CONNECTION to sqlite,
 if you need help, find in laravel documentation.
 Configure your connection settings in .env file or config/database.php.
 Now you can run the command
+
+Generate key using "php artisan key:generate"
 
 php artisan migrate
 
